@@ -7,7 +7,7 @@ class App extends Component {
       <div className="App">
         <p className="App-intro">
           Weclome to React.js
-        </p>
+        </p>        
       </div>
     );
   }
