@@ -6,6 +6,7 @@ import AddFriend from './pages/AddFriend'
 import ChatRoom from './pages/ChatRoom'
 import Home from './pages/Home'
 
+
 class App extends Component {
   render() {
     return (

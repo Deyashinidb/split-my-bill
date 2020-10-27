@@ -3,7 +3,9 @@ import {MenuItems} from './MenuItems'
 import './Navbar.css'
 import logo from './logo_b.png'
 import Sidebar from './Sidebar'
-
+import GoogleButton from '../../GoogleButton'
+// client id :- 492503563200-4dbusk6k04df9ianke5olctn1bqh1por.apps.googleusercontent.com
+// client secret :- k9prXLpb-elyDLOxRkS2lS8Q
 
 class Navbar extends Component {
     state = {
@@ -31,9 +33,11 @@ class Navbar extends Component {
                   { MenuItems.map((item,index)=>{
                      return (
                         <li key={index}>
+                            {index === 3 ? <GoogleButton/> : 
                             <a className={item.cName} href={item.url}>
                              {item.title}
                             </a>
+                            }
                         </li>
                      )
                   })}    
