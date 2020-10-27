@@ -15,6 +15,10 @@ export const MenuItems=[
         title: 'Recent Activities',
         url:'#',
         cName: 'nav-links'
+    },
+    {
+        title : 'Sign in',
+        url : '#',
+        cName : 'nav-links'
     }
-
 ]
