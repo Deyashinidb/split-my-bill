@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
-const CLIENT_ID = '492503563200-4dbusk6k04df9ianke5olctn1bqh1por.apps.googleusercontent.com';
+const CLIENT_ID = '902745051902-n8mniqfnff21k202pt4bfqubkr9ek881.apps.googleusercontent.com';
 
 
 class GoogleButton extends Component {
