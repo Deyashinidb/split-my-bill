@@ -4,6 +4,7 @@ import './Navbar.css'
 import logo from './logo_b.png'
 import Sidebar from './Sidebar'
 import GoogleButton from '../../GoogleButton'
+import {Link} from 'react-router-dom'
 // client id :- 492503563200-4dbusk6k04df9ianke5olctn1bqh1por.apps.googleusercontent.com
 // client secret :- k9prXLpb-elyDLOxRkS2lS8Q
 
@@ -34,9 +35,9 @@ class Navbar extends Component {
                      return (
                         <li key={index}>
                             {index === 3 ? <GoogleButton/> : 
-                            <a className={item.cName} href={item.url}>
+                            <Link to={item.path} className={item.cName}>
                              {item.title}
-                            </a>
+                            </Link>
                             }
                         </li>
                      )
