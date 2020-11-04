@@ -19,7 +19,7 @@
   font-size: 3rem;
 }
 
-.dashboard, .split-bill, .recents {
+.dashboard, .recents {
   display:flex;
   height:90vh;
   align-items: center;

@@ -6,8 +6,8 @@ import AddFriend from './pages/AddFriend/AddFriend'
 import ChatRoom from './pages/ChatRoom'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
-import SplitBill from './pages/SplitBill'
 import Recent from './pages/Recent'
+import SplitBill from './pages/SplitMyBill/SplitBill.js'
 
 class App extends Component {
   render() {

@@ -32,6 +32,7 @@ class GoogleButton extends Component {
   }
 
   logout (response) {
+    accessToken = null;
     this.setState(state => ({
       isLogined: false,
       accessToken: ''

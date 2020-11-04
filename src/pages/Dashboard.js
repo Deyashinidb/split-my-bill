@@ -9,7 +9,7 @@ import {accessToken} from '../GoogleButton';
 
 function Dashboard() {
     if(accessToken == null)
-    return (<h1 style={{textAlign:"center",marginTop:'200px'}}>Please Login First !</h1>)
+    return (<h1 style={{textAlign:"center",marginTop:'200px',color:"black"}}>Please Login First !</h1>)
     else
     return (
     <Container>
@@ -18,7 +18,7 @@ function Dashboard() {
     <Card style={{ width: '18rem',marginLeft:'150px',backgroundColor:"#F7E7CE"}}>
         <Card.Body>
         <Card.Title>You Owe</Card.Title>
-        <Card.Text>Simran Kaur</Card.Text>
+        <Card.Text style={{color:"black"}}>Simran Kaur</Card.Text>
         <Card.Link href="#" style={{color:"red"}}>Rs 195</Card.Link>
         <Button variant="danger">Pay</Button>
         </Card.Body>
@@ -28,7 +28,7 @@ function Dashboard() {
     <Card style={{float:'right',width: '18rem',marginRight:'150px',backgroundColor:"#cefac8"}}>
     <Card.Body>
     <Card.Title>You are Owed</Card.Title>
-    <Card.Text>Sonam Jilova</Card.Text>
+    <Card.Text style={{color:"black"}}>Sonam Jilova</Card.Text>
     <Card.Link href="#" style={{color:"green"}}>Rs 70.5</Card.Link>
     <Button variant="success">Remind</Button>
     </Card.Body>
@@ -40,7 +40,7 @@ function Dashboard() {
     <Card style={{ width: '18rem',marginLeft:'150px',backgroundColor:"#F7E7CE"}}>
         <Card.Body>
         <Card.Title>You Owe</Card.Title>
-        <Card.Text>Anjali Gupta</Card.Text>
+        <Card.Text style={{color:"black"}}>Anjali Gupta</Card.Text>
         <Card.Link href="#" style={{color:"red"}}>Rs 970</Card.Link>
         <Button variant="danger">Pay</Button>
         </Card.Body>
@@ -50,7 +50,7 @@ function Dashboard() {
     <Card style={{float:'right',width: '18rem',marginRight:'150px',backgroundColor:"#cefac8"}}>
     <Card.Body>
     <Card.Title>You are Owed</Card.Title>
-    <Card.Text>Khushnuma Abbas</Card.Text>
+    <Card.Text style={{color:"black"}}>Khushnuma Abbas</Card.Text>
     <Card.Link href="#" style={{color:"green"}}>Rs 460.3</Card.Link>
     <Button variant="success">Remind</Button>
     </Card.Body>
@@ -62,7 +62,7 @@ function Dashboard() {
     <Card style={{ width: '18rem',marginLeft:'150px',backgroundColor:"#F7E7CE"}}>
         <Card.Body>
         <Card.Title>You Owe</Card.Title>
-        <Card.Text>Mohini Verma</Card.Text>
+        <Card.Text style={{color:"black"}}>Mohini Verma</Card.Text>
         <Card.Link href="#" style={{color:"red"}}>Rs 107</Card.Link>
         <Button variant="danger">Pay</Button>
         </Card.Body>

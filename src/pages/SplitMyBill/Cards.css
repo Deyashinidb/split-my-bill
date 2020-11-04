@@ -1,0 +1,89 @@
+.instance {
+    display:inline-block;
+    border:1px solid #eee;
+    box-shadow:0 2px 2px #ccc;
+    width:400px;
+    padding:20px;
+    height:400px;
+    margin: 30px;
+    justify-content: center;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgba(22, 24, 47, 1) 0%,
+      rgba(38, 20, 72, 0.9) 59%,
+      rgba(17, 27, 75, 0.9) 100%
+    );
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+  }
+
+  .instance-name {
+      color:rgb(16, 209, 161);
+  }
+
+  .instance-details {
+      padding:20px;
+      font-size:1.5rem;
+      font-weight: 700;
+      color:rgb(96, 194, 169)
+  }
+
+.instance-delete {
+    margin-left:310px;
+    margin-top:-270px
+}
+
+.instance-t {
+  display:inline-block;
+    border:1px solid #eee;
+    box-shadow:0 2px 2px #ccc;
+    width:350px;
+    padding:20px;
+    height:350px;
+    margin: 30px;
+    justify-content: center;
+    background: radial-gradient(
+      ellipse at left bottom,
+      rgba(22, 24, 47, 1) 0%,
+      rgba(38, 20, 72, 0.9) 59%,
+      rgba(17, 27, 75, 0.9) 100%
+    );
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+}
+
+.instance-name-t {
+  color:rgb(33, 215, 231);
+}
+
+.instance-details-t-own {
+  padding:20px;
+  font-size:1.5rem;
+  font-weight: 700;
+  color:rgb(136, 233, 79)
+}
+
+.instance-details-owe {
+  padding:20px;
+  font-size:1.5rem;
+  font-weight: 700;
+  color:rgb(240, 65, 12)
+}
+
+.show-transaction {
+  margin-top:50px;
+}
+
+.per-head {
+    border:1px solid #eee;
+    box-shadow:0 2px 2px #ccc;
+    width:50%;
+    padding:20px;
+    height:20%;
+    margin: 30px;
+    justify-content: center;
+    background:rgb(5, 105, 100);
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+    color:yellow;
+    font-size:3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
