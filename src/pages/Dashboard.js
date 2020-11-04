@@ -5,8 +5,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {accessToken} from '../GoogleButton';
 
 function Dashboard() {
+    if(accessToken == null)
+    return (<h1 style={{textAlign:"center",marginTop:'200px'}}>Please Login First !</h1>)
+    else
     return (
     <Container>
   <Row style={{marginTop:"50px"}}>
@@ -70,4 +74,3 @@ function Dashboard() {
 }
 
 export default Dashboard
-//export default () => (<div><DashBoard/></div>)
