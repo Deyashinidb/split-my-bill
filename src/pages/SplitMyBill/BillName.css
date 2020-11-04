@@ -1,0 +1,53 @@
+.bill-title {
+    font-family: sans-serif;
+    position: absolute;
+    top:45%;
+    left:50%;
+    width:500px;
+    transform:translate(-50%,-50%);
+}
+
+h2{
+    margin:0 0 10px;
+    padding:0;
+    color:purple;
+    font-size: 24px;
+}
+
+input {
+    position: relative;
+    display:inline-block;
+    font-size:20px;
+    box-sizing: border-box;
+}
+
+input[type="text"]
+{
+    width:340px;
+    height:50px;
+    border: none;
+    outline: none;
+    padding:0 25px;
+    border-radius: 25px 25px 25px 25px;
+    background-color: rgb(55, 4, 75);
+    color:#fff;
+    font-weight: 500;   
+}
+
+.grp-btn
+{
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    left:-15px;
+    width:120px;
+    height:50px;
+    border: none;
+    outline:none;
+    cursor:pointer;
+    background: #ffc107;
+    color:#fff;
+}
+
+.grp-btn:hover {
+    background:#ff5722;
+}

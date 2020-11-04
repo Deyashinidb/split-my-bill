@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const CLIENT_ID = '902745051902-n8mniqfnff21k202pt4bfqubkr9ek881.apps.googleusercontent.com';
-
+export let accessToken = null;
 
 class GoogleButton extends Component {
    constructor(props) {
@@ -22,6 +22,7 @@ class GoogleButton extends Component {
 
   login (response) {
     if(response.accessToken){
+      accessToken = response.accessToken;
       this.setState(state => ({
         isLogined: true,
         accessToken: response.accessToken,
@@ -31,6 +32,7 @@ class GoogleButton extends Component {
   }
 
   logout (response) {
+    accessToken = null;
     this.setState(state => ({
       isLogined: false,
       accessToken: ''

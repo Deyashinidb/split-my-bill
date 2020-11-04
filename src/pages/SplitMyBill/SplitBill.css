@@ -1,0 +1,21 @@
+/* .split-bill {
+  height:20vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+} */
+
+.bill-head {
+    font-family: "Arial Black", sans-serif;
+    font-size: 3em;
+    background-color:rgb(82, 3, 62);
+    color: yellow;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 5px #c71efa;
+    width:50%;
+    padding:10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    transform: translateX(40%);
+}
