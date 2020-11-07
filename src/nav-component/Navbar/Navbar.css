@@ -34,6 +34,8 @@
 .nav-links:hover{
     background-color:#b45ec3;
     /*border-radius:4px;*/
+    color:white;
+    text-decoration: none;
     font-size:25px;
     border-bottom: 1px solid white;
     transition:all 0.7s ease-out;

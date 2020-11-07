@@ -7,6 +7,10 @@ import ModalDemo from './ModalDemo';
 import Cards from './Cards'
 import Transaction from './Transaction'
 
+const myStyle={
+  marginLeft:'45%',
+  marginTop:'20px'
+}
 class Board extends Component {
 
   constructor(props) {
@@ -116,7 +120,7 @@ class Board extends Component {
     return (
       <div>
         <div>{!this.state.splitted ? 
-        <Button variant="primary" onClick={this.handleShow} >
+        <Button style={myStyle} variant="primary" onClick={this.handleShow} >
         Add Participants
         </Button> : null}
         </div>
@@ -143,7 +147,7 @@ class Board extends Component {
 
          <div>
            { this.state.splitted ?
-             <Transaction perHead={this.state.perHead} data={this.state.data}/>
+             <Transaction title={this.state.title} perHead={this.state.perHead} data={this.state.data}/>
              : null
           }
          </div>

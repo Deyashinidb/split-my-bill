@@ -7,12 +7,16 @@ import Button from "react-bootstrap/Button"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {accessToken} from '../GoogleButton';
 
+const myStyle={
+    background:'url(https://media.istockphoto.com/photos/elegenat-purple-nice-website-background-picture-id462041441?k=6&m=462041441&s=170667a&w=0&h=XVVMz9V2mYiCbcvN3SMTVsz9kilGEPegwL8nHb2SSww=)',
+    width:'250%'
+}
 function Dashboard() {
     if(accessToken == null)
     return (<h1 style={{textAlign:"center",marginTop:'200px',color:"black"}}>Please Login First !</h1>)
     else
     return (
-    <Container>
+    <Container style={myStyle}>
   <Row style={{marginTop:"50px"}}>
     <Col>
     <Card style={{ width: '18rem',marginLeft:'150px',backgroundColor:"#F7E7CE"}}>
