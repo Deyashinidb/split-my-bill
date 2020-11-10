@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Transaction.css'
 import CheckBox from './CheckBox'
+import firebaseDb from '../../firebase'
 class Transaction extends Component {
     constructor(props) {
         super(props)
@@ -10,19 +11,31 @@ class Transaction extends Component {
         }
     }
     
-    handleDone =(id)=>{
-        const tmp=[...this.state.trans]
+    handleCheckBox =(id)=>{
+        let tmp=[...this.state.trans]
         let i=0
+        console.log(tmp)
         while(i<tmp.length){
             if(i===id)
-            tmp[i].done=true
+              tmp[i].done=!tmp[i].done
             i+=1
-        }
-            
-        console.log(tmp)
+        }        
         this.setState({trans:tmp})
     }
 
+    handleFinal=()=>{
+       let i=0
+      while(i<this.state.trans.length)
+      {
+        firebaseDb.child(this.props.title).push(this.state.trans[i],
+          err => {
+            if(err)
+           console.log(err)
+          })
+          i+=1
+      }
+      
+    }
     handletransaction = ()=>{
         const data = [...this.props.data]
         console.log(data)
@@ -124,11 +137,14 @@ class Transaction extends Component {
                             <td>{item.source}</td>
                             <td>{item.dest}</td>
                             <td>{item.amount.toFixed(2)}</td>
-                            <td>{!item.done? <CheckBox handleDone={this.handleDone} ind={index}/> : <span>Sorted</span> }</td>
+                      <td><CheckBox handleCheckBox={this.handleCheckBox} ind={index}/></td>
                           </tr>
                       ))}
                     </tbody>
                 </table>
+                <div>
+           <button className='split-btn' onClick={this.handleFinal}>Store Results</button>
+           </div>
             </div> : null
             }</div>
 

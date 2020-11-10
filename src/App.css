@@ -11,7 +11,7 @@
   font-size: large;
 } 
 
-.home, .chatroom {
+.chatroom {
   display:flex;
   height:90vh;
   align-items: center;

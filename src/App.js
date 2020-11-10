@@ -10,13 +10,21 @@ import Recent from './pages/Recent'
 import SplitBill from './pages/SplitMyBill/SplitBill.js'
 
 class App extends Component {
+
+  //  componentDidMount() {
+  //   firebaseDb.child('users').push({name:'Deyashini',age:22},
+  //   err => {
+  //     if(err)
+  //     console.log(err)
+  //   })
+  //  }
+ 
   render() {
     return (
       <div className="App">
         {/* <p className="App-intro">
           Weclome to React.js
         </p>         */}
-
          <Router>
          <Navbar/>
           <Switch>
@@ -28,7 +36,6 @@ class App extends Component {
             <Route path='/recents' component={Recent}/>
           </Switch>
          </Router>
-        
       </div>
     );
   }

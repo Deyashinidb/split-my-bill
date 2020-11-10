@@ -84,19 +84,19 @@ class Contact extends Component {
                   <form className='contact-form' onSubmit={this.handleSubmit}>
                     <div className='input-fields'>
                   
-                      <input type='text' className='input' value={this.state.username}
+                      <input type='text' className='input-contact' value={this.state.username}
                        onChange={this.handleUserNameChange} placeholder='Username' required/>
 
-                      <input type='email' className='input' value={this.state.email}
+                      <input type='email' className='input-contact' value={this.state.email}
                        onChange={this.handleEmailChange} placeholder='Email' required/>
 
 
-                      <input type='tel' className='input' value={this.state.phone}
+                      <input type='tel' className='input-contact' value={this.state.phone}
                        onChange={this.handlePhoneChange} placeholder='Phone Number'
                        required/>
                    </div>
 
-                  <button className='btn' type='submit'>Add Contact</button>
+                  <button className='btn-sub' type='submit'>Add Contact</button>
                </form> 
 
                 </div>

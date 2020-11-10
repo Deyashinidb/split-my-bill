@@ -24,11 +24,11 @@
     box-shadow: 0 0 10px rgba(0,0,0,1.3);
 }
 
-.input {
+.input-contact {
     width:70%
 }
 
-.input-fields .input{
+.input-fields .input-contact{
     margin:10px 0;
     background: transparent;
     border:0;
@@ -42,7 +42,7 @@
     color:#df07df;  
 }
 
-.btn{
+.btn-sub{
     background: #c704c7;
     text-align: center;
     margin-top:10px;
@@ -70,7 +70,7 @@
     display:flex;
 }
 
-.contact-table {
+.contact-tables {
     background-color:rgba(255, 255, 255, 0.1);
     border:1px solid black;
     border-radius: 25px;

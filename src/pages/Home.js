@@ -1,9 +1,11 @@
 import React from 'react'
-
+import Body from './Body'
+import Footer from './Footer'
 function Home() {
     return (
         <div className='home'>
-           <h1>Home, Your Friends</h1> 
+           <Body/>
+           <Footer/>
         </div>
     )
 }
