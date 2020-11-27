@@ -9,7 +9,7 @@ class ContactList extends Component {
     render() {
         const contactItem=this.props.children
         return (
-            <div className='contact-table'>
+            <div className='contact-tables'>
             <table className='main-table'>
                 <thead className='contact-head'>
                     <tr className='heading'>

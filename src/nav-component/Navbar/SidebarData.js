@@ -19,8 +19,8 @@ export const SidebarData=[
         cName: 'nav-text'
     },
     {
-        title: 'Chatroom',
-        path: '/chatroom',
+        title: 'Contact Us',
+        path: '/contactus',
         icon: <AiIcons.AiOutlineWechat/>,
         cName: 'nav-text'
     }
