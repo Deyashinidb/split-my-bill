@@ -6,15 +6,15 @@ import {SidebarData} from './SidebarData'
 import './Sidebar.css'
 import {IconContext} from 'react-icons'
 
-function Sidebar() {
+function Sidebar(props) {
     const [sidebar,setSidebar]=useState(false)
 
     const showSidebar =()=>setSidebar(!sidebar)
-
+    
     return (
-        <React.Fragment>
+    <React.Fragment>
             <IconContext.Provider value={{color:'#fff'}}>
-             <div className='sidebar' onClick={showSidebar}>
+             <div className='sidebar' onClick={showSidebar} onMouseOver={props.handleSideHome} >
                     <Link to="#" className='side-menu-bars'>
                       <FaIcons.FaBars/> 
                     </Link>                   
@@ -32,15 +32,14 @@ function Sidebar() {
                                   <Link to={item.path}>
                                       {item.icon}
                                       <span> {item.title} </span>
-                                  </Link>
+                                  </Link>                                  
                               </li>
                           )
                       })}
                   </ul>
               </nav>
         </IconContext.Provider>
-       </React.Fragment>
-         
+       </React.Fragment>  
     )
 }
 

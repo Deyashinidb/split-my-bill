@@ -17,11 +17,14 @@ class Navbar extends Component {
         this.setState({clicked:!this.state.clicked})
     }
 
+    handleSideHome=()=>{
+        this.props.handleHome();
+    }
     render() {
         return (
             <div>
                <nav className='NavbarItems'>
-                   <Sidebar/>
+                   <Sidebar handleSideHome={this.handleSideHome}/>
                  <img src={logo} alt="Logo" className='navbar-logo'/>
                  
                  <div className='menu-icon' onClick={this.handleClick}>
@@ -35,7 +38,7 @@ class Navbar extends Component {
                      return (
                         <li key={index}>
                             {index === 3 ? <GoogleButton/> : 
-                            <Link to={item.path} className={item.cName}>
+                            <Link onClick={this.props.handleHome} to={item.path} className={item.cName}>
                              {item.title}
                             </Link>
                             }
