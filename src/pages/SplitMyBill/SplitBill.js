@@ -3,7 +3,7 @@ import  Board from './Board'
 import Caption from './Caption'
 import BillName from './BillName'
 import './SplitBill.css'
-
+import {accessToken} from '../../GoogleButton'
 
 class SplitBill extends Component {
     constructor(props) {
@@ -21,7 +21,10 @@ class SplitBill extends Component {
     }
     render() {
         return (
-              <div>
+        <div>{accessToken==null ? 
+            <h1 style={{textAlign:"center",marginTop:'200px',color:"black"}}>Please Login First !</h1>:
+
+            <div>
                   {/* caption */}
                  <Caption/>
 
@@ -40,6 +43,9 @@ class SplitBill extends Component {
                    </div>
 
                </div>
+
+        }</div>
+              
         )
     }
 }

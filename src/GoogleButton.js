@@ -3,6 +3,7 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const CLIENT_ID = '902745051902-n8mniqfnff21k202pt4bfqubkr9ek881.apps.googleusercontent.com';
 export let accessToken = null;
+export let userName=null;
 
 class GoogleButton extends Component {
    constructor(props) {
@@ -23,6 +24,7 @@ class GoogleButton extends Component {
   login (response) {
     if(response.accessToken){
       accessToken = response.accessToken;
+      userName=response.getBasicProfile().getName()
       this.setState(state => ({
         isLogined: true,
         accessToken: response.accessToken,
@@ -47,6 +49,7 @@ class GoogleButton extends Component {
     alert('Failed to log out')
   }
   render() {
+    
     return (
     <div>
       { this.state.isLogined ?

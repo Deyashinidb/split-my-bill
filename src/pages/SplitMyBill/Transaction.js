@@ -27,7 +27,7 @@ class Transaction extends Component {
        let i=0
       while(i<this.state.trans.length)
       {
-        firebaseDb.child(this.props.title).push(this.state.trans[i],
+        firebaseDb.child("trips").child(this.props.title).push(this.state.trans[i],
           err => {
             if(err)
            console.log(err)
@@ -54,7 +54,9 @@ class Transaction extends Component {
             if(ownArray[i].own>oweArray[j].owe) {
             tmpTransact=[...tmpTransact,{
               source:oweArray[j].name,
+              semail:oweArray[j].email,
               dest:ownArray[i].name,
+              demail:ownArray[i].email,
               amount:oweArray[j].owe,
               done:false
             }]
@@ -66,7 +68,9 @@ class Transaction extends Component {
             else if(ownArray[i].own<oweArray[j].owe) {
               tmpTransact=[...tmpTransact,{
                 source:oweArray[j].name,
+                semail:oweArray[j].email,
                 dest:ownArray[i].name,
+                demail:ownArray[i].email,
                 amount:ownArray[i].own,
                 done:false
               }]
@@ -79,7 +83,9 @@ class Transaction extends Component {
               {
                   tmpTransact=[...tmpTransact,{
                   source:oweArray[j].name,
+                  semail:oweArray[j].email,
                   dest:ownArray[i].name,
+                  demail:ownArray[i].email,
                   amount:ownArray[i].own,
                   done:false
                 }]
