@@ -9,11 +9,16 @@ class SplitBill extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            contacts:[],
              billName:false,
              title:''
         }
     }
     
+    componentDidMount=()=>{
+     this.setState({contacts:JSON.parse(localStorage["contacts"])})
+    }
+
     handleBillName =(tit) => {
         this.setState({billName:true,
           title:tit
@@ -21,6 +26,7 @@ class SplitBill extends Component {
     }
     render() {
         return (
+            
         <div>{accessToken==null ? 
             <h1 style={{textAlign:"center",marginTop:'200px',color:"black"}}>Please Login First !</h1>:
 
@@ -39,7 +45,7 @@ class SplitBill extends Component {
                 {/* Billing Board */}
                    <div>
                        {this.state.billName ? 
-                       <Board>{this.state.title}</Board> : null} 
+                       <Board contacts={this.state.contacts}>{this.state.title}</Board> : null} 
                    </div>
 
                </div>

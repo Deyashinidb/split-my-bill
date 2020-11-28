@@ -14,6 +14,10 @@ class Contact extends Component {
         }
     }
     
+    componentWillUnmount=()=>{
+      localStorage.setItem('contacts', JSON.stringify(this.state.names));
+    }
+
     handleUserNameChange=(event)=>{
       this.setState({
           username:event.target.value

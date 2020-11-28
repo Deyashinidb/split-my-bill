@@ -7,13 +7,14 @@ import {accessToken} from '../GoogleButton'
     function sendEmail(e) {
         e.preventDefault();
 
-    emailjs.sendForm('service_4s25i2c', 'template_qymd6sr', e.target, 'user_XTs5mWZRbddoVppQYkZ8D')
+     emailjs.sendForm('service_4s25i2c', 'template_qymd6sr', e.target, 'user_XTs5mWZRbddoVppQYkZ8D')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
             console.log(error.text);
         });
-        e.target.reset()
+        e.target.reset();
+        alert("Feedback sent successfully!!");
     }
 
     if(accessToken == null)

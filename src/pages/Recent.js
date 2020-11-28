@@ -82,7 +82,7 @@ class Recent extends Component {
                                 <tr key={t[0]}>
                                     <td>{t[1].source}</td>
                                     <td>{t[1].dest}</td>
-                                    <td>{t[1].amount.toFixed(2)}</td>
+                                    <td>{t[1].amount.toFixed(2)} /-</td>
                                     <td>{t[1].done===true ? 'Paid': 'Payment Pending'}</td>
                                 </tr>
                             )

@@ -58,10 +58,10 @@ class ModalDemo extends Component {
      })
         
      }
-
+    
+     
 
     render() {
-
         return (
             <div>
                 <Modal show={this.props.show} onHide={() => this.props.onHide({ msg: 'Entry Cancelled!' })} centered dialogClassName='full-screen-modal'>
@@ -74,8 +74,23 @@ class ModalDemo extends Component {
 
                     <Modal.Body>
                         <form className='modal-form'>
-                            <input type="text" placeholder='Name' value={this.state.name} onChange={this.handleNameChange} required className='modal-field'/>
-                            <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} required className='modal-field'/>
+                            
+                            <input list="browsers" id="myBrowser" name="myBrowser" placeholder='Name' required value={this.state.name} className='modal-field' onChange={this.handleNameChange} required />
+                            <datalist id="browsers">
+                              {this.props.contacts.map( (contact,index) => {
+                         return (
+                         <option key={index} value={contact.title}>
+                         </option>
+                         )})}
+                            </datalist>
+                            <input list="brow" id="myBrow" name="myBrow" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} required className='modal-field'/>
+                            <datalist id="brow">
+                              {this.props.contacts.map( (contact,index) => {
+                               return (
+                               <option key={index} value={contact.email}>
+                                </option>
+                               )})}
+                            </datalist>
                             <input type="number" placeholder="Amount Paid" value={this.state.amount} onChange={this.handleAmountChange} required className='modal-field'/>
                             <input type="text" placeholder="Purpose" value={this.state.purpose} onChange={this.handlePurposeChange} className='modal-field' />
                         </form>

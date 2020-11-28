@@ -2,7 +2,7 @@
     display:inline-block;
     border:1px solid #eee;
     box-shadow:0 2px 2px #ccc;
-    width:400px;
+    width:500px;
     padding:20px;
     height:400px;
     margin: 30px;
@@ -28,8 +28,8 @@
   }
 
 .instance-delete {
-    margin-left:310px;
-    margin-top:-270px
+    margin-left:400px;
+    margin-top:-270px;
 }
 
 .instance-t {

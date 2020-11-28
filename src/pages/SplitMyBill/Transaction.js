@@ -34,7 +34,7 @@ class Transaction extends Component {
           })
           i+=1
       }
-      
+      alert('Trip Details stored Successfully!!!')
     }
     handletransaction = ()=>{
         const data = [...this.props.data]

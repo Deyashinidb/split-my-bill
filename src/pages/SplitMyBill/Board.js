@@ -116,9 +116,10 @@ class Board extends Component {
     }
 
   render() {
-
+   let contacts=this.props.contacts
     return (
       <div>
+       
         <div>{!this.state.splitted ? 
         <Button style={myStyle} variant="primary" onClick={this.handleShow} >
         Add Participants
@@ -128,6 +129,7 @@ class Board extends Component {
         <ModalDemo
           show={this.state.show}
           title={this.state.title}
+          contacts={contacts}
         //   data={this.state.data}
           onClick={this.handleClose}
           onHide={this.handleClose}
